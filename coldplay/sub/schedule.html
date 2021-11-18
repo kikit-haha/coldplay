@@ -1,0 +1,56 @@
+<section>
+    <link rel="stylesheet" href="./css/schedule.css" type="text/css">
+    <h3>SCHEDULE</h3>
+    <iframe src="http://kikithaha.dothome.co.kr/bbs/bbs/board.php?bo_table=schedule" frameborder="0" scrolling="no"></iframe>
+    <nav class="sub_nav">
+        <ul>
+            <li><a href="#" title="">profile</a></li>
+            <li><a href="#" title="">News</a></li>
+            <li><a href="#" title="">Gallery</a></li>
+            <li><a href="#" title="">Discography</a></li>
+            <li><a href="#" title="">Producing</a></li>
+            <li class="active"><a href="#" title="">Schedule</a></li>
+        </ul>
+    </nav>
+    <script>
+        $(document).ready(function() {
+            /*마우스 오버애니메이션*/
+            $('.sub_nav>ul>li').hover(function() {
+                $(this).toggleClass('hover');
+                $(this).siblings('.active').toggleClass('opa');
+                console.log('이거' + $(this).siblings());
+
+            });
+            //클릭한 a요소의 주소를 받아서 함수에 넘겨준다.
+            function subLink(url) {
+                $('section').load(url);
+            }
+            $('.sub_nav>ul>li:eq(0)>a').click(function() {
+                subLink('./sub/profile.html')
+            });
+            $('.sub_nav>ul>li:eq(1)>a').click(function() {
+                subLink('./sub/news.html')
+
+            });
+            $('.sub_nav>ul>li:eq(2)>a').click(function() {
+                subLink('./sub/gallery.html')
+
+            });
+            $('.sub_nav>ul>li:eq(3)>a').click(function() {
+                subLink('./sub/discography.html')
+
+            });
+            $('.sub_nav>ul>li:eq(4)>a').click(function() {
+                subLink('./sub/producing.html')
+
+            });
+            $('.sub_nav>ul>li:eq(5)>a').click(function() {
+                return false;
+
+            });
+
+
+        });
+
+    </script>
+</section>

@@ -37,9 +37,6 @@ $(document).ready(function () {
     pageLink("./sub/discography.html");
   });
   $(".gnb_main li:eq(4)>a").click(function () {
-    pageLink("./sub/producing.html");
-  });
-  $(".gnb_main li:eq(5)>a").click(function () {
     pageLink("./sub/schedule.html");
   });
 
@@ -61,10 +58,6 @@ $(document).ready(function () {
     pageLink("./sub/discography.html");
   });
   $(".toggleMenu>nav li:eq(4)>a").click(function () {
-    barAniClose();
-    pageLink("./sub/producing.html");
-  });
-  $(".toggleMenu>nav li:eq(5)>a").click(function () {
     barAniClose();
     pageLink("./sub/schedule.html");
   });

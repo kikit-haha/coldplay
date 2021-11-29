@@ -3,265 +3,290 @@
 
 /* 헤더영역 */
 header {
-	width: 100%;
-	height: 120px;
-	position: fixed;
-	z-index: 20;
-	padding: 40px 40px 30px 40px;
-	box-sizing: border-box;
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  z-index: 20;
+  padding: 40px 40px 30px 40px;
+  box-sizing: border-box;
 }
 
 header > h1 {
-	font-family: 'PT Serif', serif;
-	float: left;
-	color: #fff;
-	font-weight: 800;
-	font-size: 40px;
-	padding: 5px;
+  font-family: "PT Serif", serif;
+  float: left;
+  color: #fff;
+  font-weight: 800;
+  font-size: 40px;
+  padding: 5px;
+}
+.gnb_nav {
+  bottom: 600px;
 }
 
 /*토글버튼*/
 header > .toggle {
-	float: right;
-	width: 40px;
-	height: 30px;
-	padding: 10px;
-	cursor: pointer;
+  float: right;
+  width: 40px;
+  height: 30px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .toggle > .bar {
-	background-color: #fff;
-	width: 40px;
-	height: 6px;
-	position: absolute;
-	right: 40px;
-	margin-bottom: 6px;
-	transition: .5s;
+  background-color: #fff;
+  width: 40px;
+  height: 6px;
+  position: absolute;
+  right: 40px;
+  margin-bottom: 6px;
+  transition: 0.5s;
 }
 
 .toggle > .bar:first-child {
-	top: 40px;
+  top: 40px;
 }
 
 .toggle > .bar:nth-child(2) {
-	top: 52px;
-	width: 32px;
+  top: 52px;
+  width: 32px;
 }
 
 .toggle > .bar:last-child {
-	width: 20px;
-	top: 64px;
-	margin-bottom: 0px;
+  width: 20px;
+  top: 64px;
+  margin-bottom: 0px;
 }
 
 /*토글버튼 마우스hover시 길이맞추기*/
 .toggle > .bar.hover {
-	width: 40px !important;
-
+  width: 40px !important;
 }
 
 /*상단 햄버거메뉴 클릭시 회전하여 X자 모양 나오게하기*/
 .toggle > .bar.closeToggle_L {
-	transform: rotate(45deg);
-	width: 40px !important;
+  transform: rotate(45deg);
+  width: 40px !important;
 }
 
 .toggle > .bar.closeToggle_R {
-	transform: rotate(-45deg);
-	top: 40px !important;
-	width: 40px !important;
+  transform: rotate(-45deg);
+  top: 40px !important;
+  width: 40px !important;
 }
-
 
 /* sns아이콘 서식 */
 .snsBtn {
-	position: absolute;
-	bottom: 80px;
-	right: 5%;
-	z-index: 20;
+  position: absolute;
+  bottom: 20px;
+  right: 5%;
+  z-index: 20;
 }
 
 .snsBtn li a {
-	position: relative;
-	width: 45px;
-	height: 45px;
-	border-radius: 50%;
-	display: block;
-	border: 1px solid #fff;
-	opacity: 0.4;
-	overflow: hidden;
-	transition: 0.6s;
-	margin-bottom: 10px;
+  position: relative;
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: block;
+
+  opacity: 0.4;
+  overflow: hidden;
+  transition: 0.6s;
+
+  margin-bottom: 10px;
 }
 
 .snsBtn li a i {
-	position: absolute;
-	z-index: 2;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 26px;
-	transition: 0.6s;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 26px;
+  transition: 0.6s;
+
+  width: 50%;
+  height: 50%;
+
+  background-image: url("../images/icons.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(45%);
+}
+.snsBtn li a i.instagram {
+  background-position: -71px 0px;
+}
+.snsBtn li a i.twitter {
+  background-position: -24px 0px;
+}
+.snsBtn li a i.youtube {
+  background-position: -48px 0px;
 }
 
 .snsBtn > ul > li > a.hover {
-	opacity: 1;
+  opacity: 1;
 }
 
 .snsBtn > ul > li > a > span.bg {
-	position: absolute;
-	display: block;
-	background-color: #fff;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	transition: 0.6s;
-	top: -50px;
-	left: -2px;
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.6s;
+  top: -50px;
+  left: -2px;
 }
 
 .snsBtn > ul > li > a > span.bg.hover {
-	top: -2px;
+  top: -2px;
 }
 
 .snsBtn > ul > li > a > i.hover {
-	color: #222;
+  color: #222;
+  filter: invert(0%);
 }
 
 /*토글메뉴서식*/
 .toggleMenu {
-	position: fixed;
-	top: -100%;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	background-color: #233123;
-	z-index: 10;
+  position: fixed;
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #233123;
+  z-index: 10;
 }
 
 .toggleMenu > .bgText {
-	position: absolute;
-	font-size: 300px;
-	font-weight: 900;
-	color: #191819;
-	left: 5%;
-	top: 50%;
-	transform: translateY(-50%);
+  position: absolute;
+  font-size: 300px;
+  font-weight: 900;
+  color: #191819;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 nav.nav_toggle {
-	position: absolute;
-	right: 10%;
-	top: 50%;
-	transform: translateY(-50%);
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-
-
 .toggleMenu .bar {
-	float: right;
-	width: 2px;
-	height: 2px;
-	background-color: #eee;
-	margin: 40px 0px;
-	transition: 0.6s;
+  float: right;
+  width: 2px;
+  height: 2px;
+  background-color: #eee;
+  margin: 40px 0px;
+  transition: 0.6s;
 }
 
 .toggleMenu .bar.hover {
-	width: 80px !important;
+  width: 80px !important;
 }
 
 .toggleMenu a {
-	float: right;
-	display: block;
-	font-size: 62px;
-	text-transform: uppercase;
-	font-weight: 100;
-	padding: 10px;
-	transition: .8s;
-
+  float: right;
+  display: block;
+  font-size: 62px;
+  text-transform: uppercase;
+  font-weight: 100;
+  padding: 10px;
+  transition: 0.4s;
 }
 
 .toggleMenu li a.hover {
-	font-weight: 900 !important;
+  font-weight: 900 !important;
 }
 
 /*서브메뉴 공통내비게이션 서식*/
 
 .sub_nav {
-	position: absolute;
-	bottom: 80px;
-	left: 80px;
-
+  position: absolute;
+  bottom: 20px;
+  left: 80px;
 }
 
 .sub_nav li {
-	float: left;
-	margin-right: 5px;
-	border-bottom: 2px solid #fff;
-	overflow: hidden;
-	width: 40px;
-	transition: .6s;
-	text-align: center;
-	/*    opacity: 0;*/
+  float: left;
+  margin-right: 5px;
+  border-bottom: 2px solid #fff;
+  overflow: hidden;
+  width: 40px;
+  transition: 0.6s;
+  text-align: center;
+  /*    opacity: 0;*/
 }
 
 .sub_nav a {
-	font-size: 17px;
-	padding: 10px;
-	display: block;
-	text-transform: uppercase;
-	opacity: 0;
-	transition: 0.6s;
-
+  font-size: 17px;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: 0.6s;
 }
 
 .sub_nav li.active {
-	width: 80px;
+  width: 80px;
 }
 
 .sub_nav li.active a {
-	opacity: 1;
+  opacity: 1;
 }
 
 .sub_nav li.active.opa {
-	opacity: 0.3;
+  opacity: 0.3;
 }
 
 .sub_nav li.hover:first-child {
-	width: 80px;
+  width: 80px;
 }
 
 .sub_nav li.hover:nth-child(2) {
-	width: 60px;
+  width: 60px;
 }
-
 
 .sub_nav li.hover:nth-child(3) {
-	width: 85px;
+  width: 85px;
 }
 
-
 .sub_nav li.hover:nth-child(4) {
-	width: 128px;
-
+  width: 128px;
 }
 
 .sub_nav li.hover:nth-child(5) {
-	width: 108px;
-
+  width: 108px;
 }
 
 .sub_nav li.hover:last-child {
-	width: 97px;
+  width: 97px;
 }
 
 .sub_nav > ul > li:hover a {
-	opacity: 1;
+  opacity: 1;
 }
 
 section {
-	position: fixed;
-	width: 100%;
-	height: 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  font-size: 8px;
+  position: absolute;
+  right: 0px;
+  bottom: 4px;
+  color: #555;
+}
+footer a {
+  color: #555;
 }

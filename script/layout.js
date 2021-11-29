@@ -21,7 +21,7 @@ $(document).ready(function () {
 
   //햄버거메뉴를 클릭하면 X자모양 나오게 하고
   //마지막 바를 애니메이션한다.
-  console.log($(".toggle").children(".bar:lt(2)"));
+  // console.log($(".toggle").children(".bar:lt(2)"));
 
   function barAniOpen() {
     //세번째 바가 길어지면서 아래로 내려간다.
@@ -32,14 +32,14 @@ $(document).ready(function () {
         {
           width: $(window).width() - 80,
         },
-        500,
+        300,
       );
 
     $(".toggle>.bar:last-child").animate(
       {
         top: "100vh",
       },
-      1000,
+      300,
     );
     //첫번째두번째 바 엑스자로 만들기
 

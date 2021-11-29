@@ -1,1 +1,122 @@
-<h2>Discography</h2>
+<section>
+  <link rel="stylesheet" href="../css/news.css" type="text/css" />
+
+  <h3>Discography</h3>
+  <!--       스와이퍼슬라이더-->
+  <div class="swiper-container" id="disco-container"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <nav class="sub_nav">
+    <ul>
+      <li><a href="#" title="">profile</a></li>
+      <li><a href="#" title="">News</a></li>
+      <li><a href="#" title="">Gallery</a></li>
+      <li class="active"><a href="#" title="">Discography</a></li>
+      <li><a href="#" title="">Schedule</a></li>
+    </ul>
+  </nav>
+  <!--        스와이퍼슬라이드 서식과 제이쿼리-->
+  <link rel="stylesheet" href="./css/swiper.min.css" type="text/css" />
+  <script defer src="../script/albums.js"></script>
+
+  <script src="./script/swiper.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      /*마우스 오버애니메이션*/
+      $(".sub_nav>ul>li").hover(function () {
+        $(this).toggleClass("hover");
+        $(this).siblings("active").toggleClass("opa");
+      });
+      //클릭한 a요소의 주소를 받아서 함수에 넘겨준다.
+      function subLink(url) {
+        $("section").load(url);
+      }
+
+      $(".sub_nav>ul>li:eq(0)>a").click(function () {
+        subLink("./sub/profile.html");
+      });
+      $(".sub_nav>ul>li:eq(1)>a").click(function () {
+        subLink("./sub/news.html");
+      });
+      $(".sub_nav>ul>li:eq(2)>a").click(function () {
+        subLink("./sub/gallery.html");
+      });
+      $(".sub_nav>ul>li:eq(3)>a").click(function () {
+        return false;
+      });
+      $(".sub_nav>ul>li:eq(4)>a").click(function () {
+        subLink("./sub/schedule.html");
+      });
+
+      //스와이퍼슬라이드
+      var mql = window.matchMedia("screen and (max-height: 1300px)");
+
+      if (mql.matches) {
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          slidesOffsetAfter: 10,
+          slidesOffsetBefore: 10,
+          spaceBetween: 50,
+          breakpoints: {
+            // when window width is >= 480px
+            520: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            // when window width is >= 640px
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            // when window width is >= 640px
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          },
+        });
+      } else {
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          slidesPerColumn: 2,
+          slidesPerColumnFill: "column",
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          slidesOffsetAfter: 10,
+          slidesOffsetBefore: 10,
+          spaceBetween: 50,
+          breakpoints: {
+            // when window width is >= 480px
+            520: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+              slidesPerColumn: 2,
+              slidesPerColumnFill: "column",
+            },
+            // when window width is >= 640px
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+              slidesPerColumn: 2,
+              slidesPerColumnFill: "column",
+            },
+            // when window width is >= 640px
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+              slidesPerColumn: 2,
+              slidesPerColumnFill: "column",
+            },
+          },
+        });
+      }
+    });
+  </script>
+</section>

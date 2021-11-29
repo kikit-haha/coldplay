@@ -2,109 +2,118 @@
 
 /* 배경영상 */
 .bgMovie {
-	position: absolute;
-	top: 30%;
-	width: 1600px;
-	z-index: 1;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
+  position: absolute;
+  top: 30%;
+  width: 1600px;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .bgMovie > video {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .bgMovie > div {
-	width: 30%;
-	height: 500px;
-	overflow: hidden;
+  width: 30%;
+  height: 500px;
+  overflow: hidden;
 }
 
-
-
 .bgMovie img {
-	width: 100%;
+  width: 100%;
 }
 
 .gnb_main {
-	position: absolute;
-	left: 65%;
-	top: 65%;
-	height: 500px;
-	width: 90%;
-	z-index: 10;
-
+  position: absolute;
+  left: 65%;
+  top: 65%;
+  height: 500px;
+  width: 90%;
+  z-index: 10;
 }
 
 .gnb_main > ul {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .gnb_main > ul > li {
-	position: relative;
-	display: block;
-	width: 40%;
-	height: 82px;
+  position: relative;
+  display: block;
+  width: 40%;
+  height: 82px;
 }
 
 nav.gnb_main > ul > li > a {
-	position: absolute;
-	font-size: 80px;
-	font-weight: 900;
-	text-transform: uppercase;
-	color: #232123;
-	text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff;
+  position: absolute;
+  font-size: 80px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #232123;
+  text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff;
 }
 
 nav.gnb_main > ul > li > .fill {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	font-size: 82px;
-	font-weight: 900;
-	text-transform: uppercase;
-	pointer-events: none;
-	opacity: 0;
-	/*	display:none;*/
-	transition: 0.8s;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font-size: 82px;
+  font-weight: 900;
+  text-transform: uppercase;
+  pointer-events: none;
+  opacity: 0;
+  /*	display:none;*/
+  transition: 0.8s;
 }
 
 nav.gnb_main > ul > li > a:hover + .fill {
-	opacity: 1;
+  opacity: 1;
 }
 
 /*팝업 서식*/
 .popup {
-	position: absolute;
-	top: 10%;
-	right: 10%;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	z-index: 10000;
-	background-color: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  top: 40px;
+  right: 10%;
+  width: 240px;
+  height: 240px;
+
+  padding: 40px;
+  border-radius: 50%;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .popup .p_txt {
-	font-size: 14px;
-	text-align: center;
-	line-height: 30px;
-	font-weight: bold;
-	color: #1f1f1f;
-	padding: 30px 20px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  color: #1f1f1f;
 
-
+  width: 100%;
+  height: 80%;
 }
 
-.popup i.fas {
-	position: relative;
-	font-size: 30px;
-	color: #fff;
-	top: -228px;
-	right: -180px;
+.popup .popup_close {
+  width: 26px;
+  height: 26px;
 
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
 
+  background-image: url("../images/icons.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.popup .popup_close:hover {
+  filter: invert(45%);
 }
